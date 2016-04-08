@@ -1,0 +1,6 @@
+= simple_form_for @page, url: admin_pages_path do |f|
+  = f.association   :chapter
+  = f.input         :title
+  = f.input         :hover_text
+  = f.file_field    :image
+  = f.submit

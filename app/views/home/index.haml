@@ -1,0 +1,8 @@
+.homepage-container
+  %h1 Homepage
+  = link_to 'Admin area', admin_pages_path
+  = link_to 'Logout', destroy_user_session_path, method: :delete
+  -if @page.present?
+    %h2 Latest comic
+    %h3= @page.title
+    = image_tag(@page.image, title: @page.hover_text, alt: @page.title)

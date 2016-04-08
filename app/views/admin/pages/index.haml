@@ -1,0 +1,4 @@
+%h1 All Comics
+- @pages.each do |p|
+  %h3= p.title
+  = image_tag(p.image, title: p.hover_text, alt: p.title)
